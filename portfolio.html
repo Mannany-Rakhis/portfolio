@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Rakhis Mannany - Développeur Étudiant à l'École-IT Valenciennes">
+  <title>Rakhis Mannany — Développeur</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;900&family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="cursor"></div>
+  
+  <nav class="navbar" id="navbar">
+    <div class="container nav-flex">
+      <a href="#" class="logo">RM<span class="accent">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">Parcours</a></li>
+        <li><a href="#projects" class="nav-link">Projets</a></li>
+        <li><a href="#skills" class="nav-link">Compétences</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="container">
+      <p class="reveal mono-accent">Bonjour, je suis</p>
+      <h1 class="big-title reveal">RAKHIS <span>MANNANY</span></h1>
+      <p class="hero-intro reveal">
+        Étudiant à l'École-IT Valenciennes. Passionné par le développement logiciel, les infrastructures Cloud et l'IA. Je conçois des solutions numériques robustes, sécurisées et orientées utilisateur.
+      </p>
+      <div class="reveal" style="margin-top: 30px;">
+        <a href="#projects" class="btn-send" style="display: inline-block; text-decoration: none;">Voir mes projets</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-label reveal">01. Profil</h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p class="large-text">Développeur en formation à l'École-IT, je conçois des solutions numériques alliant technique et créativité.</p>
+          <p style="color: var(--text-dim); margin-bottom: 25px;">
+            Ma vision est simple : un code doit être robuste, propre et sécurisé pour répondre durablement aux besoins des utilisateurs. Curieux de nature, j'explore les vastes domaines de l'informatique pour me spécialiser demain dans le Cloud, les Infrastructures ou l'Intelligence Artificielle.
+          </p>
+          <div class="stat-group">
+            <span>Formation</span>
+            <h3>École-IT Valenciennes</h3>
+          </div>
+          <div class="stat-group">
+            <span>Objectifs</span>
+            <h3>Cloud, Infra & AI</h3>
+          </div>
+        </div>
+        <div class="about-visual reveal">
+          <div class="code-window" style="max-width: 380px; margin: 0 auto;">
+            <div class="window-header">
+              <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+              <span class="github-tag">profile.json</span>
+            </div>
+            <div class="code-content">
+              <code>
+                {<br>
+                &nbsp;&nbsp;"name": "Rakhis Mannany",<br>
+                &nbsp;&nbsp;"role": "Fullstack Developer",<br>
+                &nbsp;&nbsp;"focus": ["Cloud", "AI", "Security"],<br>
+                &nbsp;&nbsp;"status": "Building cool stuff..."<br>
+                }
+              </code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-label reveal">02. Réalisations</h2>
+      <div class="projects-list">
+        
+        <div class="project-item reveal">
+          <div class="code-window">
+            <a href="https://github.com/Mannany-Rakhis" target="_blank" class="code-link-wrapper">
+              <div class="window-header">
+                <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                <span class="github-tag">quiz_engine.py | GitHub ↗</span>
+              </div>
+              <div class="code-content">
+                <code>
+                  <span class="keyword">class</span> QuizEngine:<br>
+                  &nbsp;&nbsp;<span class="keyword">def</span> <span class="func">__init__</span>(self, bank):<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;self.questions = self.<span class="func">shuffle</span>(bank)<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;self.score = <span class="str">0</span><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;self.penalty = <span class="str">-0.5</span> <span class="comment"># Points négatifs</span><br>
+                  <br>
+                  &nbsp;&nbsp;<span class="keyword">def</span> <span class="func">submit_answer</span>(self, idx, user_idx):<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;q = self.questions[idx]<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> user_idx == q.correct_idx:<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.score += <span class="str">1</span><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">else</span>: self.score += self.penalty
+                </code>
+              </div>
+            </a>
+          </div>
+          <div class="project-text">
+            <h3>QCM Révision POO Python</h3>
+            <p>Plateforme interactive de révision ciblant les concepts fondamentaux de la Programmation Orientée Objet (Héritage, Polymorphisme, Encapsulation). Le moteur intègre un système de <strong>points négatifs</strong> pour pénaliser les réponses aléatoires, favorisant ainsi la réflexion et la maîtrise réelle des concepts avant les examens.</p>
+            <div class="tech-stack">
+              <span>Python 3</span><span>OOP</span><span>Logique Métier</span><span>Algorithmie</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJET 2 : Marketplace Livres -->
+        <div class="project-item reverse reveal">
+          <div class="code-window">
+            <a href="https://github.com/Mannany-Rakhis" target="_blank" class="code-link-wrapper">
+              <div class="window-header">
+                <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                <span class="github-tag">db_manager.php</span>
+              </div>
+              <div class="code-content">
+                <code>
+                  <span class="comment">// Insertion sécurisée via PDO</span><br>
+                  <span class="keyword">$sql</span> = <span class="str">"INSERT INTO books (title, author, price) VALUES (:t, :a, :p)"</span>;<br>
+                  <span class="keyword">$stmt</span> = <span class="keyword">$pdo</span>->prepare(<span class="keyword">$sql</span>);<br>
+                  <span class="keyword">$stmt</span>->execute([<br>
+                  &nbsp;&nbsp;<span class="str">':t'</span> => <span class="func">htmlspecialchars</span>(<span class="keyword">$_POST</span>[<span class="str">'title'</span>]),<br>
+                  &nbsp;&nbsp;<span class="str">':a'</span> => <span class="func">htmlspecialchars</span>(<span class="keyword">$_POST</span>[<span class="str">'author'</span>]),<br>
+                  &nbsp;&nbsp;<span class="str">':p'</span> => <span class="func">floatval</span>(<span class="keyword">$_POST</span>[<span class="str">'price'</span>])<br>
+                  ]);<br>
+                  <br>
+                  <span class="comment">// Rendu dynamique HTML</span><br>
+                  <span class="keyword">$res</span> = <span class="keyword">$pdo</span>->query(<span class="str">"SELECT * FROM books ORDER BY id DESC"</span>);<br>
+                  <span class="keyword">foreach</span>(<span class="keyword">$res</span> <span class="keyword">as</span> <span class="keyword">$book</span>) {<br>
+                  &nbsp;&nbsp;<span class="func">echo</span> <span class="str">"&lt;article class='book-card'&gt;{$book['title']}&lt;/article&gt;"</span>;<br>
+                  }
+                </code>
+              </div>
+            </a>
+          </div>
+          <div class="project-text">
+            <h3>Marketplace Livres</h3>
+            <p>Application web de gestion de bibliothèque connectée à <strong>MySQL</strong> via <strong>PDO</strong>. Permet l'ajout sécurisé d'ouvrages via formulaire (échappement XSS & requêtes préparées contre les injections SQL). Les données sont ensuite récupérées et affichées dynamiquement sur l'interface HTML, avec un système de tri et de pagination côté serveur.</p>
+            <div class="tech-stack">
+              <span>PHP 8</span><span>MySQL</span><span>PDO</span><span>HTML5/CSS3</span><span>Sécurité Web</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-label reveal">03. Stack Technique</h2>
+      <div class="skills-grid reveal">
+        <div class="skill-card">
+          <h3>Frontend</h3>
+          <div class="skill-tags">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript ES6</span><span>React (Bases)</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Backend & DB</h3>
+          <div class="skill-tags">
+            <span>PHP 8</span><span>Python 3</span><span>MySQL</span><span>PDO/SQL</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Outils & DevOps</h3>
+          <div class="skill-tags">
+            <span>Git/GitHub</span><span>VS Code</span><span>Linux</span><span>Docker (Initiation)</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Concepts</h3>
+          <div class="skill-tags">
+            <span>OOP</span><span>MVC</span><span>REST API</span><span>Sécurité Web</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-label reveal">04. Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3 class="large-text">On discute de votre prochain projet ?</h3>
+          <p style="color: var(--text-dim); margin-bottom: 25px;">
+            Je suis actuellement ouvert aux opportunités de stage, d'alternance ou de collaboration sur des projets open-source. N'hésitez pas à me contacter, je réponds généralement sous 24h.
+          </p>
+          <div class="social-links-footer">
+            <a href="https://github.com/Mannany-Rakhis" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/mannany-rakhis/" target="_blank">LinkedIn</a>
+            <a href="mailto:ton.email@ecole-it.com">Email</a>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contactForm">
+          <input type="text" name="name" placeholder="Votre nom" required aria-label="Votre nom">
+          <input type="email" name="email" placeholder="Votre email" required aria-label="Votre email">
+          <textarea name="message" rows="5" placeholder="Votre message..." required aria-label="Votre message"></textarea>
+          <button type="submit" class="btn-send">Envoyer →</button>
+          <p id="formStatus" class="form-status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="mono-accent" style="margin-bottom: 10px;">RAKHIS MANNANY — ÉCOLE-IT VALENCIENNES — 2026</p>
+      <p style="color: var(--text-dim); font-size: 0.8rem;">Conçu avec beaucoup de café </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
