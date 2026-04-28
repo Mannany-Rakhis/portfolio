@@ -6,7 +6,7 @@
   <meta name="description" content="Portfolio de Rakhis Mannany - Développeur Étudiant à l'École-IT Valenciennes">
   <title>Rakhis Mannany — Développeur</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;900&family=Fira+Code&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="cursor"></div>
@@ -30,8 +30,9 @@
       <p class="hero-intro reveal">
         Étudiant à l'École-IT Valenciennes. Passionné par le développement logiciel, les infrastructures Cloud et l'IA. Je conçois des solutions numériques robustes, sécurisées et orientées utilisateur.
       </p>
-      <div class="reveal" style="margin-top: 30px;">
+      <div class="reveal hero-actions" style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap;">
         <a href="#projects" class="btn-send" style="display: inline-block; text-decoration: none;">Voir mes projets</a>
+        <a href="CV_Rakhis_Mannany.pdf" target="_blank" class="btn-send btn-outline" style="display: inline-block; text-decoration: none; background: transparent; border: 1px solid var(--accent); color: var(--accent);">Télécharger CV</a>
       </div>
     </div>
   </header>
@@ -43,8 +44,14 @@
         <div class="about-text reveal">
           <p class="large-text">Développeur en formation à l'École-IT, je conçois des solutions numériques alliant technique et créativité.</p>
           <p style="color: var(--text-dim); margin-bottom: 25px;">
-            Ma vision est simple : un code doit être robuste, propre et sécurisé pour répondre durablement aux besoins des utilisateurs. Curieux de nature, j'explore les vastes domaines de l'informatique pour me spécialiser demain dans le Cloud, les Infrastructures ou l'Intelligence Artificielle.
+            Ma vision est simple : un code doit être robuste, propre et sécurisé pour répondre durablement aux besoins des utilisateurs.
           </p>
+
+          <div class="search-highlight" style="background: rgba(100, 255, 218, 0.05); border-left: 3px solid var(--accent); padding: 20px; margin-bottom: 30px;">
+            <h3 style="color: var(--accent); font-size: 1.1rem; margin-bottom: 10px; font-family: 'Fira Code';">_Ce que je recherche</h3>
+            <p style="font-size: 0.95rem; color: var(--text);">Actuellement à la recherche d'une <strong>alternance</strong> (ou d'un stage) afin de mettre mes compétences en développement et ma rigueur technique au service d'infrastructures Cloud ou de projets IA.</p>
+          </div>
+
           <div class="stat-group">
             <span>Formation</span>
             <h3>École-IT Valenciennes</h3>
@@ -66,7 +73,7 @@
                 &nbsp;&nbsp;"name": "Rakhis Mannany",<br>
                 &nbsp;&nbsp;"role": "Fullstack Developer",<br>
                 &nbsp;&nbsp;"focus": ["Cloud", "AI", "Security"],<br>
-                &nbsp;&nbsp;"status": "Building cool stuff..."<br>
+                &nbsp;&nbsp;"status": "Learning by building"<br>
                 }
               </code>
             </div>
@@ -86,35 +93,32 @@
             <a href="https://github.com/Mannany-Rakhis" target="_blank" class="code-link-wrapper">
               <div class="window-header">
                 <div class="dot"></div><div class="dot"></div><div class="dot"></div>
-                <span class="github-tag">quiz_engine.py | GitHub ↗</span>
+                <span class="github-tag">quiz_engine.js | GitHub ↗</span>
               </div>
               <div class="code-content">
                 <code>
-                  <span class="keyword">class</span> QuizEngine:<br>
-                  &nbsp;&nbsp;<span class="keyword">def</span> <span class="func">__init__</span>(self, bank):<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;self.questions = self.<span class="func">shuffle</span>(bank)<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;self.score = <span class="str">0</span><br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;self.penalty = <span class="str">-0.5</span> <span class="comment"># Points négatifs</span><br>
-                  <br>
-                  &nbsp;&nbsp;<span class="keyword">def</span> <span class="func">submit_answer</span>(self, idx, user_idx):<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;q = self.questions[idx]<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> user_idx == q.correct_idx:<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.score += <span class="str">1</span><br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">else</span>: self.score += self.penalty
+                  <span class="keyword">function</span> <span class="func">shuffle</span>(array) {<br>
+                  &nbsp;&nbsp;<span class="keyword">const</span> copy = [...array];<br>
+                  &nbsp;&nbsp;<span class="keyword">for</span> (<span class="keyword">let</span> i = copy.length - 1; i > 0; i--) {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">const</span> j = Math.<span class="func">floor</span>(Math.<span class="func">random</span>() * (i + 1));<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;[copy[i], copy[j]] = [copy[j], copy[i]];<br>
+                  &nbsp;&nbsp;}<br>
+                  &nbsp;&nbsp;<span class="keyword">return</span> copy.slice(0, 50);<br>
+                  }
                 </code>
               </div>
             </a>
           </div>
           <div class="project-text">
             <h3>QCM Révision POO Python</h3>
-            <p>Plateforme interactive de révision ciblant les concepts fondamentaux de la Programmation Orientée Objet (Héritage, Polymorphisme, Encapsulation). Le moteur intègre un système de <strong>points négatifs</strong> pour pénaliser les réponses aléatoires, favorisant ainsi la réflexion et la maîtrise réelle des concepts avant les examens.</p>
+            <p><strong>Challenge :</strong> Concevoir un outil d'évaluation fiable sans base de données backend.</p>
+            <p><strong>Solution :</strong> Utilisation d'un algorithme de mélange de Fisher-Yates pour garantir un tirage aléatoire pur parmi +100 questions stockées en JSON. Intégration d'un système de points négatifs pour valoriser la réflexion sur la chance.</p>
             <div class="tech-stack">
-              <span>Python 3</span><span>OOP</span><span>Logique Métier</span><span>Algorithmie</span>
+              <span>JavaScript ES6</span><span>JSON Data</span><span>Algorithmie</span>
             </div>
           </div>
         </div>
 
-        <!-- PROJET 2 : Marketplace Livres -->
         <div class="project-item reverse reveal">
           <div class="code-window">
             <a href="https://github.com/Mannany-Rakhis" target="_blank" class="code-link-wrapper">
@@ -124,29 +128,49 @@
               </div>
               <div class="code-content">
                 <code>
-                  <span class="comment">// Insertion sécurisée via PDO</span><br>
-                  <span class="keyword">$sql</span> = <span class="str">"INSERT INTO books (title, author, price) VALUES (:t, :a, :p)"</span>;<br>
+                  <span class="comment">// Sécurisation et gestion relationnelle</span><br>
+                  <span class="keyword">$sql</span> = <span class="str">"SELECT b.title, a.name AS author <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FROM books b <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JOIN authors a ON b.author_id = a.id"</span>;<br>
                   <span class="keyword">$stmt</span> = <span class="keyword">$pdo</span>->prepare(<span class="keyword">$sql</span>);<br>
-                  <span class="keyword">$stmt</span>->execute([<br>
-                  &nbsp;&nbsp;<span class="str">':t'</span> => <span class="func">htmlspecialchars</span>(<span class="keyword">$_POST</span>[<span class="str">'title'</span>]),<br>
-                  &nbsp;&nbsp;<span class="str">':a'</span> => <span class="func">htmlspecialchars</span>(<span class="keyword">$_POST</span>[<span class="str">'author'</span>]),<br>
-                  &nbsp;&nbsp;<span class="str">':p'</span> => <span class="func">floatval</span>(<span class="keyword">$_POST</span>[<span class="str">'price'</span>])<br>
-                  ]);<br>
-                  <br>
-                  <span class="comment">// Rendu dynamique HTML</span><br>
-                  <span class="keyword">$res</span> = <span class="keyword">$pdo</span>->query(<span class="str">"SELECT * FROM books ORDER BY id DESC"</span>);<br>
-                  <span class="keyword">foreach</span>(<span class="keyword">$res</span> <span class="keyword">as</span> <span class="keyword">$book</span>) {<br>
-                  &nbsp;&nbsp;<span class="func">echo</span> <span class="str">"&lt;article class='book-card'&gt;{$book['title']}&lt;/article&gt;"</span>;<br>
-                  }
+                  <span class="keyword">$stmt</span>->execute();
                 </code>
               </div>
             </a>
           </div>
           <div class="project-text">
             <h3>Marketplace Livres</h3>
-            <p>Application web de gestion de bibliothèque connectée à <strong>MySQL</strong> via <strong>PDO</strong>. Permet l'ajout sécurisé d'ouvrages via formulaire (échappement XSS & requêtes préparées contre les injections SQL). Les données sont ensuite récupérées et affichées dynamiquement sur l'interface HTML, avec un système de tri et de pagination côté serveur.</p>
+            <p><strong>Challenge :</strong> Gérer un catalogue dynamique de manière sécurisée.</p>
+            <p><strong>Solution :</strong> Architecture PHP/MySQL utilisant des requêtes préparées PDO pour bloquer les injections SQL. Système de jointures SQL pour lier auteurs et titres, affichés dynamiquement via PHP.</p>
             <div class="tech-stack">
-              <span>PHP 8</span><span>MySQL</span><span>PDO</span><span>HTML5/CSS3</span><span>Sécurité Web</span>
+              <span>PHP 8</span><span>MySQL</span><span>PDO</span><span>Sécurité Web</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-item reveal">
+          <div class="code-window">
+            <div class="window-header">
+              <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+              <span class="github-tag">game_loop.js</span>
+            </div>
+            <div class="code-content">
+              <code>
+                <span class="comment">// Boucle asynchrone optimisée</span><br>
+                <span class="func">setInterval</span>(() => {<br>
+                &nbsp;&nbsp;score += autoProduction;<br>
+                &nbsp;&nbsp;<span class="func">updateUI</span>(score);<br>
+                }, 1000);<br>
+                <span class="func">btn</span>.<span class="func">addEventListener</span>(<span class="str">'click'</span>, handleManualClick);
+              </code>
+            </div>
+          </div>
+          <div class="project-text">
+            <h3>Game Engine : Clicker</h3>
+            <p><strong>Challenge :</strong> Maintenir une interface fluide (60 FPS) malgré l'accumulation de calculs.</p>
+            <p><strong>Solution :</strong> Séparation stricte entre les événements utilisateur et la boucle de production automatique. Architecture modulaire utilisant des objets JavaScript pour ajouter des améliorations sans modifier le cœur du moteur.</p>
+            <div class="tech-stack">
+              <span>JS ES6</span><span>DOM Manipulation</span><span>Performance</span>
             </div>
           </div>
         </div>
@@ -162,25 +186,25 @@
         <div class="skill-card">
           <h3>Frontend</h3>
           <div class="skill-tags">
-            <span>HTML5</span><span>CSS3</span><span>JavaScript ES6</span><span>React (Bases)</span>
+            <span>HTML5</span><span>CSS3</span><span>JS ES6</span><span>Responsive Design</span>
           </div>
         </div>
         <div class="skill-card">
           <h3>Backend & DB</h3>
           <div class="skill-tags">
-            <span>PHP 8</span><span>Python 3</span><span>MySQL</span><span>PDO/SQL</span>
+            <span>PHP 8</span><span>Python 3</span><span>MySQL</span><span>SQL/PDO</span>
           </div>
         </div>
         <div class="skill-card">
-          <h3>Outils & DevOps</h3>
+          <h3>Outils</h3>
           <div class="skill-tags">
-            <span>Git/GitHub</span><span>VS Code</span><span>Linux</span><span>Docker (Initiation)</span>
+            <span>Git/GitHub</span><span>Linux</span><span>WAMP</span><span>VS Code</span>
           </div>
         </div>
         <div class="skill-card">
-          <h3>Concepts</h3>
+          <h3>Expertise</h3>
           <div class="skill-tags">
-            <span>OOP</span><span>MVC</span><span>REST API</span><span>Sécurité Web</span>
+            <span>POO</span><span>Algorithmie</span><span>Sécurité Web</span>
           </div>
         </div>
       </div>
@@ -192,22 +216,20 @@
       <h2 class="section-label reveal">04. Contact</h2>
       <div class="contact-grid">
         <div class="contact-info reveal">
-          <h3 class="large-text">On discute de votre prochain projet ?</h3>
+          <h3 class="large-text">Bâtissons le futur ensemble.</h3>
           <p style="color: var(--text-dim); margin-bottom: 25px;">
-            Je suis actuellement ouvert aux opportunités de stage, d'alternance ou de collaboration sur des projets open-source. N'hésitez pas à me contacter, je réponds généralement sous 24h.
+            Actuellement ouvert aux opportunités d'<strong>alternance</strong> ou de stage.
           </p>
           <div class="social-links-footer">
             <a href="https://github.com/Mannany-Rakhis" target="_blank">GitHub</a>
             <a href="https://www.linkedin.com/in/mannany-rakhis/" target="_blank">LinkedIn</a>
-            <a href="mailto:ton.email@ecole-it.com">Email</a>
           </div>
         </div>
-        <form class="contact-form reveal" id="contactForm">
-          <input type="text" name="name" placeholder="Votre nom" required aria-label="Votre nom">
-          <input type="email" name="email" placeholder="Votre email" required aria-label="Votre email">
-          <textarea name="message" rows="5" placeholder="Votre message..." required aria-label="Votre message"></textarea>
+        <form class="contact-form reveal" action="https://formspree.io/f/mqewvwkz" method="POST">
+          <input type="text" name="name" placeholder="Votre nom" required>
+          <input type="email" name="email" placeholder="Votre email" required>
+          <textarea name="message" rows="5" placeholder="Votre message..." required></textarea>
           <button type="submit" class="btn-send">Envoyer →</button>
-          <p id="formStatus" class="form-status"></p>
         </form>
       </div>
     </div>
@@ -216,7 +238,7 @@
   <footer class="footer">
     <div class="container">
       <p class="mono-accent" style="margin-bottom: 10px;">RAKHIS MANNANY — ÉCOLE-IT VALENCIENNES — 2026</p>
-      <p style="color: var(--text-dim); font-size: 0.8rem;">Conçu avec beaucoup de café </p>
+      <p style="color: var(--text-dim); font-size: 0.8rem;">Construire, apprendre, innover.</p>
     </div>
   </footer>
 
