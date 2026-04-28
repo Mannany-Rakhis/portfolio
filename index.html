@@ -9,7 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+  
   <div class="cursor"></div>
+  <div class="cursor-follower"></div>
   
   <nav class="navbar" id="navbar">
     <div class="container nav-flex">
@@ -183,25 +185,25 @@
     <div class="container">
       <h2 class="section-label reveal">03. Stack Technique</h2>
       <div class="skills-grid reveal">
-        <div class="skill-card">
+        <div class="skill-card" style="--i:0">
           <h3>Frontend</h3>
           <div class="skill-tags">
             <span>HTML5</span><span>CSS3</span><span>JS ES6</span><span>Responsive Design</span>
           </div>
         </div>
-        <div class="skill-card">
+        <div class="skill-card" style="--i:1">
           <h3>Backend & DB</h3>
           <div class="skill-tags">
             <span>PHP 8</span><span>Python 3</span><span>MySQL</span><span>SQL/PDO</span>
           </div>
         </div>
-        <div class="skill-card">
+        <div class="skill-card" style="--i:2">
           <h3>Outils</h3>
           <div class="skill-tags">
             <span>Git/GitHub</span><span>Linux</span><span>WAMP</span><span>VS Code</span>
           </div>
         </div>
-        <div class="skill-card">
+        <div class="skill-card" style="--i:3">
           <h3>Expertise</h3>
           <div class="skill-tags">
             <span>POO</span><span>Algorithmie</span><span>Sécurité Web</span>
@@ -221,15 +223,15 @@
             Actuellement ouvert aux opportunités d'<strong>alternance</strong> ou de stage.
           </p>
           <div class="social-links-footer">
-            <a href="https://github.com/Mannany-Rakhis" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/mannany-rakhis/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Mannany-Rakhis" target="_blank" class="interactive">GitHub</a>
+            <a href="https://www.linkedin.com/in/mannany-rakhis/" target="_blank" class="interactive">LinkedIn</a>
           </div>
         </div>
         <form class="contact-form reveal" action="https://formspree.io/f/mqewvwkz" method="POST">
-          <input type="text" name="name" placeholder="Votre nom" required>
-          <input type="email" name="email" placeholder="Votre email" required>
-          <textarea name="message" rows="5" placeholder="Votre message..." required></textarea>
-          <button type="submit" class="btn-send">Envoyer →</button>
+          <input type="text" name="name" placeholder="Votre nom" required class="interactive">
+          <input type="email" name="email" placeholder="Votre email" required class="interactive">
+          <textarea name="message" rows="5" placeholder="Votre message..." required class="interactive"></textarea>
+          <button type="submit" class="btn-send interactive">Envoyer →</button>
         </form>
       </div>
     </div>
