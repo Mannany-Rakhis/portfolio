@@ -7,7 +7,7 @@ let cursorX = 0, cursorY = 0;
 function initCursor() {
   if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
     document.body.style.cursor = 'auto';
-    document.querySelectorAll('a, button, .btn-send, .nav-link, input, textarea, .interactive').forEach(el => el.style.cursor = 'pointer');
+    document.querySelectorAll('a, button, .btn-send, input, textarea, .interactive').forEach(el => el.style.cursor = 'pointer');
     return;
   }
   cursor.style.display = 'block';
@@ -25,7 +25,7 @@ function initCursor() {
   }
   animateFollower();
 
-  const interactiveSelectors = 'a, button, .btn-send, .nav-link, input, textarea, .skill-tags span, .project-item, .interactive, [role="button"]';
+  const interactiveSelectors = 'a, button, .btn-send, input, textarea, .skill-tags span, .project-item, .interactive, [role="button"]';
   document.addEventListener('mouseover', (e) => {
     if (e.target.closest(interactiveSelectors)) {
       cursor.classList.add('hover');
@@ -46,6 +46,39 @@ function initCursor() {
   document.addEventListener('mouseup', () => cursor.classList.remove('click'));
 }
 
+/* ==================== SIDEBAR NAVIGATION ACTIVE STATE ==================== */
+function initSidebarNav() {
+  const sections = document.querySelectorAll('section, header');
+  const sidebarLinks = document.querySelectorAll('.sidebar-link');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        sidebarLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.dataset.section === id) link.classList.add('active');
+        });
+      }
+    });
+  }, { threshold: 0.3, rootMargin: '-100px 0px -60% 0px' });
+
+  sections.forEach(section => observer.observe(section));
+
+  sidebarLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.dataset.section;
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        sidebarLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      }
+    });
+  });
+}
+
 /* ==================== SCROLL REVEAL ==================== */
 function initScrollReveal() {
   const observer = new IntersectionObserver((entries) => {
@@ -64,24 +97,9 @@ function initCodeParallax() {
     const y = (window.innerHeight / 2 - e.pageY) / 50;
     windows.forEach(win => {
       const rect = win.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) win.style.transform = `perspective(1000px) rotateY(${x}deg) rotateX(${y}deg)`;
-    });
-  });
-}
-
-/* ==================== NAVBAR SCROLL ==================== */
-function initNavbarScroll() {
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
-}
-
-/* ==================== SMOOTH SCROLL ==================== */
-function initSmoothScroll() {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        win.style.transform = `perspective(1000px) rotateY(${x}deg) rotateX(${y}deg)`;
+      }
     });
   });
 }
@@ -89,9 +107,8 @@ function initSmoothScroll() {
 /* ==================== INIT ==================== */
 document.addEventListener('DOMContentLoaded', () => {
   initCursor();
+  initSidebarNav();
   initScrollReveal();
   initCodeParallax();
-  initNavbarScroll();
-  initSmoothScroll();
   console.log('%c✨ Portfolio chargé avec succès', 'color: #64ffda; font-weight: bold;');
 });

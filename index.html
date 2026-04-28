@@ -5,24 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio de Rakhis Mannany - Développeur Étudiant à l'École-IT Valenciennes">
   <title>Rakhis Mannany — Développeur</title>
+  <!-- Devicon pour les logos sociaux uniquement -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Curseurs personnalisés -->
   <div class="cursor"></div>
   <div class="cursor-follower"></div>
   
-  <nav class="navbar" id="navbar">
-    <div class="container nav-flex">
-      <a href="#" class="logo">RM<span class="accent">.</span></a>
-      <ul class="nav-links">
-        <li><a href="#about" class="nav-link">Parcours</a></li>
-        <li><a href="#projects" class="nav-link">Projets</a></li>
-        <li><a href="#skills" class="nav-link">Compétences</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
+  <!-- Sidebar Navigation (unique) -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <a href="#home" class="sidebar-logo">RM<span>.</span></a>
     </div>
-  </nav>
+    
+    <nav class="sidebar-nav">
+      <a href="#home" class="sidebar-link active" data-section="home" title="Accueil">
+        <span class="sidebar-dot"></span>
+        <span class="sidebar-label">Accueil</span>
+      </a>
+      <a href="#about" class="sidebar-link" data-section="about" title="Profil">
+        <span class="sidebar-dot"></span>
+        <span class="sidebar-label">Profil</span>
+      </a>
+      <a href="#projects" class="sidebar-link" data-section="projects" title="Projets">
+        <span class="sidebar-dot"></span>
+        <span class="sidebar-label">Projets</span>
+      </a>
+      <a href="#skills" class="sidebar-link" data-section="skills" title="Compétences">
+        <span class="sidebar-dot"></span>
+        <span class="sidebar-label">Stack</span>
+      </a>
+      <a href="#contact" class="sidebar-link" data-section="contact" title="Contact">
+        <span class="sidebar-dot"></span>
+        <span class="sidebar-label">Contact</span>
+      </a>
+    </nav>
+    
+    <div class="sidebar-social">
+      <a href="https://github.com/Mannany-Rakhis" target="_blank" title="GitHub" class="sidebar-icon">
+        <i class="devicon-github-original"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/mannany-rakhis/" target="_blank" title="LinkedIn" class="sidebar-icon">
+        <i class="devicon-linkedin-plain"></i>
+      </a>
+    </div>
+  </aside>
 
   <header class="hero" id="home">
     <div class="container">
@@ -89,7 +119,7 @@
         
         <!-- PROJET 1 -->
         <article class="project-card reveal">
-          <a href="https://github.com/Mannany-Rakhis/qcm-python#readme" target="_blank" class="card-link">
+          <a href="https://github.com/Mannany-Rakhis/qcm-site#readme" target="_blank" class="card-link">
             <div class="card-visual">
               <div class="code-preview">
                 <pre><code><span class="keyword">def</span> <span class="func">shuffle_questions</span>(pool):
@@ -100,7 +130,7 @@
 <span class="comment"># O(n) | Équitable | Sans doublons</span></code></pre>
               </div>
               <div class="card-overlay">
-                <span class="hover-text"> Ouvrir la documentation</span>
+                <span class="hover-text">📖 Ouvrir la documentation</span>
               </div>
             </div>
           </a>
@@ -131,7 +161,7 @@
 "</span>);</code></pre>
               </div>
               <div class="card-overlay">
-                <span class="hover-text"> Ouvrir la documentation</span>
+                <span class="hover-text">📖 Ouvrir la documentation</span>
               </div>
             </div>
           </a>
@@ -165,7 +195,7 @@
 }</code></pre>
               </div>
               <div class="card-overlay">
-                <span class="hover-text"> Ouvrir la documentation</span>
+                <span class="hover-text">📖 Ouvrir la documentation</span>
               </div>
             </div>
           </a>
@@ -197,7 +227,7 @@
         <span class="func">print</span>(<span class="str">"❌ mhmmmm NON. Entrez 1, 2 ou 3."</span>)</code></pre>
               </div>
               <div class="card-overlay">
-                <span class="hover-text"> Ouvrir la documentation</span>
+                <span class="hover-text">📖 Ouvrir la documentation</span>
               </div>
             </div>
           </a>
@@ -261,8 +291,12 @@
             Actuellement ouvert aux opportunités d'<strong>alternance</strong> ou de stage.
           </p>
           <div class="social-links-footer">
-            <a href="https://github.com/Mannany-Rakhis" target="_blank" class="interactive">GitHub</a>
-            <a href="https://www.linkedin.com/in/mannany-rakhis/" target="_blank" class="interactive">LinkedIn</a>
+            <a href="https://github.com/Mannany-Rakhis" target="_blank" class="interactive">
+              <i class="devicon-github-original colored"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/mannany-rakhis/" target="_blank" class="interactive">
+              <i class="devicon-linkedin-plain colored"></i> LinkedIn
+            </a>
           </div>
         </div>
         <form class="contact-form reveal" action="https://formspree.io/f/mqewvwkz" method="POST">
