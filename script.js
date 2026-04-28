@@ -1,4 +1,3 @@
-/* ==================== CURSEUR PERSONNALISÉ ==================== */
 const cursor = document.querySelector('.cursor');
 const follower = document.querySelector('.cursor-follower');
 let mouseX = 0, mouseY = 0;
@@ -46,7 +45,6 @@ function initCursor() {
   document.addEventListener('mouseup', () => cursor.classList.remove('click'));
 }
 
-/* ==================== SIDEBAR NAVIGATION ACTIVE STATE ==================== */
 function initSidebarNav() {
   const sections = document.querySelectorAll('section, header');
   const sidebarLinks = document.querySelectorAll('.sidebar-link');
@@ -79,7 +77,6 @@ function initSidebarNav() {
   });
 }
 
-/* ==================== SCROLL REVEAL ==================== */
 function initScrollReveal() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -89,7 +86,6 @@ function initScrollReveal() {
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 }
 
-/* ==================== PARALLAXE 3D ==================== */
 function initCodeParallax() {
   document.addEventListener('mousemove', (e) => {
     const windows = document.querySelectorAll('.code-window');
@@ -104,7 +100,6 @@ function initCodeParallax() {
   });
 }
 
-/* ==================== INIT ==================== */
 document.addEventListener('DOMContentLoaded', () => {
   initCursor();
   initSidebarNav();
