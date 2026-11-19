@@ -3,318 +3,194 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio de Rakhis Mannany - Développeur Étudiant à l'École-IT Valenciennes">
-  <title>Rakhis Mannany — Développeur</title>
-  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <meta name="description" content="Portfolio de Rakhis Mannany - Développeur web backend, étudiant en Bachelor Cybersécurité &amp; Cloud à Ynov Campus Lille">
+  <title>Rakhis Mannany — Développeur web backend</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <div class="cursor"></div>
-  <div class="cursor-follower"></div>
-  
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-brand">
-      <a href="#home" class="sidebar-logo">RM<span>.</span></a>
-    </div>
-    
-    <nav class="sidebar-nav">
-      <a href="#home" class="sidebar-link active" data-section="home" title="Accueil">
-        <span class="sidebar-dot"></span>
-        <span class="sidebar-label">Accueil</span>
-      </a>
-      <a href="#about" class="sidebar-link" data-section="about" title="Profil">
-        <span class="sidebar-dot"></span>
-        <span class="sidebar-label">Profil</span>
-      </a>
-      <a href="#projects" class="sidebar-link" data-section="projects" title="Projets">
-        <span class="sidebar-dot"></span>
-        <span class="sidebar-label">Projets</span>
-      </a>
-      <a href="#skills" class="sidebar-link" data-section="skills" title="Compétences">
-        <span class="sidebar-dot"></span>
-        <span class="sidebar-label">Stack</span>
-      </a>
-      <a href="#contact" class="sidebar-link" data-section="contact" title="Contact">
-        <span class="sidebar-dot"></span>
-        <span class="sidebar-label">Contact</span>
-      </a>
+  <div class="wrap">
+
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#top" class="logo">rakhis<span>.dev</span></a>
+      <div class="nav-links">
+        <a href="#experience">Expérience</a>
+        <a href="#projets">Projets</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact">Contact</a>
+        <a href="CV_Rakhis_Mannany.pdf" target="_blank" rel="noopener" class="nav-cv">CV (PDF)</a>
+      </div>
     </nav>
-    
-    <div class="sidebar-social">
-      <a href="https://github.com/Mannany-Rakhis" target="_blank" title="GitHub" class="sidebar-icon">
-        <i class="devicon-github-original"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/mannany-rakhis/" target="_blank" title="LinkedIn" class="sidebar-icon">
-        <i class="devicon-linkedin-plain"></i>
-      </a>
-    </div>
-  </aside>
 
-  <header class="hero" id="home">
-    <div class="container">
-      <p class="reveal mono-accent">Bonjour, je suis</p>
-      <h1 class="big-title reveal">RAKHIS <span>MANNANY</span></h1>
-      <p class="hero-intro reveal">
-        Étudiant à l'École-IT Valenciennes. Passionné par le développement logiciel, les infrastructures Cloud et l'IA. Je conçois des solutions numériques, sécurisées et orientées utilisateur.
-      </p>
-      <div class="reveal hero-actions">
-        <a href="#projects" class="btn-send">Voir mes projets</a>
-        <a href="CV_Rakhis_Mannany.pdf" target="_blank" class="btn-send btn-outline">Télécharger CV</a>
-      </div>
-    </div>
-  </header>
-
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section-label reveal">01. Profil</h2>
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <p class="large-text">Développeur en formation à l'École-IT, je conçois des solutions numériques alliant technique et créativité.</p>
-          <p style="color: var(--text-dim); margin-bottom: 25px;">
-            Ma vision est simple : un code doit être robuste, propre et sécurisé pour répondre durablement aux besoins des utilisateurs.
-          </p>
-          <div class="search-highlight">
-            <h3>Ce que je recherche</h3>
-            <p>Actuellement à la recherche d'une <strong>alternance</strong> (ou d'un stage) afin de mettre mes compétences en développement et ma rigueur technique au service d'infrastructures Cloud ou de projets IA.</p>
-          </div>
-          <div class="stat-group">
-            <span>Formation</span>
-            <h3>École-IT Valenciennes</h3>
-          </div>
-          <div class="stat-group">
-            <span>Objectifs</span>
-            <h3>Cloud, Infra & AI</h3>
-          </div>
-        </div>
-        <div class="about-visual reveal">
-          <div class="code-window">
-            <div class="window-header">
-              <div class="dot"></div><div class="dot"></div><div class="dot"></div>
-              <span class="github-tag">profile.json</span>
-            </div>
-            <div class="code-content">
-              <code>
-                {<br>
-                &nbsp;&nbsp;"name": "Rakhis Mannany",<br>
-                &nbsp;&nbsp;"role": "Junior Developer",<br>
-                &nbsp;&nbsp;"focus": ["Cloud", "AI", "Security"],<br>
-                &nbsp;&nbsp;"status": "Learning by building"<br>
-                }
-              </code>
-            </div>
-          </div>
+    <header class="hero" id="top">
+      <div class="hero-text">
+        <span class="pill">Disponible pour un stage · 5 semaines minimum</span>
+        <h1>Applications web de bout en bout, <span>code propre et sûr.</span></h1>
+        <p class="hero-intro">Rakhis Mannany, développeur web backend. Étudiant en Bachelor Cybersécurité &amp; Cloud à Ynov Campus Lille, je cherche un stage pour progresser sur le backend au sein d'une équipe.</p>
+        <div class="actions">
+          <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+          <a href="#contact" class="btn btn-secondary">Me contacter</a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="section-label reveal">02. Réalisations</h2>
-      <div class="projects-grid">
-        
-        <!-- PROJET 1 -->
-        <article class="project-card reveal">
-          <a href="https://github.com/Mannany-Rakhis/qcm-site#readme" target="_blank" class="card-link">
-            <div class="card-visual">
-              <div class="code-preview">
-                <pre><code><span class="keyword">def</span> <span class="func">shuffle_questions</span>(pool):
-    random.shuffle(pool)
-    <span class="keyword">return</span> pool[:50]
-
-<span class="comment"># Fisher-Yates optimisé</span>
-<span class="comment"># O(n) | Équitable | Sans doublons</span></code></pre>
-              </div>
-              <div class="card-overlay">
-                <span class="hover-text"> Ouvrir la documentation</span>
-              </div>
-            </div>
-          </a>
-          <div class="card-content">
-            <h3>QCM Révision POO Python</h3>
-            <p class="meta"> <strong>Objectif :</strong> Outil d'évaluation fiable sans backend</p>
-            <p class="meta"> <strong>Résultat :</strong> +100 questions, scoring intelligent, 0 requête DB</p>
-            <div class="tech-tags">
-              <span>Python</span><span>Algo</span><span>JSON</span><span>UX</span>
-            </div>
-            <div class="card-actions">
-              <a href="https://github.com/Mannany-Rakhis/qcm-site" target="_blank" class="btn-ghost"> Repo GitHub ↗</a>
-              <span class="status-badge"> Lien vers mon travail</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJET 2 -->
-        <article class="project-card reveal">
-          <a href="https://github.com/Mannany-Rakhis/projet-recherche-et-ajout-livre#readme" target="_blank" class="card-link">
-            <div class="card-visual">
-              <div class="code-preview">
-                <pre><code><span class="keyword">$stmt</span> = <span class="keyword">$pdo</span>->prepare(<span class="str">"
-  SELECT b.title, a.name 
-  FROM books b 
-  JOIN authors a ON b.author_id = a.id
-  WHERE b.available = :status
-"</span>);</code></pre>
-              </div>
-              <div class="card-overlay">
-                <span class="hover-text"> Ouvrir la documentation</span>
-              </div>
-            </div>
-          </a>
-          <div class="card-content">
-            <h3>Marketplace Livres</h3>
-            <p class="meta"> <strong>Objectif :</strong> Catalogue dynamique sécurisé</p>
-            <p class="meta"> <strong>Résultat :</strong> Requêtes préparées PDO, 0 faille SQL, architecture MVC</p>
-            <div class="tech-tags">
-              <span>PHP 8</span><span>MySQL</span><span>PDO</span><span>Sécurité</span>
-            </div>
-            <div class="card-actions">
-              <a href="https://github.com/Mannany-Rakhis/projet-recherche-et-ajout-livre" target="_blank" class="btn-ghost"> Repo GitHub ↗</a>
-              <span class="status-badge"> Lien vers mon travail</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJET 3 -->
-        <article class="project-card reveal">
-          <a href="https://github.com/Mannany-Rakhis/clicker#readme" target="_blank" class="card-link">
-            <div class="card-visual">
-              <div class="code-preview">
-                <pre><code><span class="keyword">class</span> <span class="func">GameEngine</span> {
-  <span class="func">loop</span>(ts) {
-    <span class="keyword">if</span> (ts - last >= 1000) {
-      <span class="keyword">this</span>.score += rate;
-      last = ts;
-    }
-    requestAnimationFrame(<span class="keyword">this</span>.loop);
-  }
-}</code></pre>
-              </div>
-              <div class="card-overlay">
-                <span class="hover-text"> Ouvrir la documentation</span>
-              </div>
-            </div>
-          </a>
-          <div class="card-content">
-            <h3>Game Engine : Clicker</h3>
-            <p class="meta"> <strong>Objectif :</strong> 60 FPS stables avec calculs temps réel</p>
-            <p class="meta"> <strong>Résultat :</strong> Boucle `rAF`, sauvegarde locale, 0 lag</p>
-            <div class="tech-tags">
-              <span>JS ES6</span><span>OOP</span><span>Performance</span><span>localStorage</span>
-            </div>
-            <div class="card-actions">
-              <a href="https://github.com/Mannany-Rakhis/clicker" target="_blank" class="btn-ghost"> Repo GitHub ↗</a>
-              <span class="status-badge"> Lien vers mon travail</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- PROJET 4 : CHIFFOUMI -->
-        <article class="project-card reveal">
-          <a href="https://github.com/Mannany-Rakhis/Projet-1-python#readme" target="_blank" class="card-link">
-            <div class="card-visual">
-              <div class="code-preview">
-                <pre><code><span class="keyword">def</span> <span class="func">menu</span>():
-    <span class="func">print</span>(<span class="str">"=== TOURNOI ==="</span>)
-    <span class="keyword">while</span> True:
-        choix = <span class="func">input</span>(<span class="str">"Choix (1/2/3) : "</span>).strip()
-        <span class="keyword">if</span> choix <span class="keyword">in</span> [<span class="str">"1"</span>, <span class="str">"2"</span>, <span class="str">"3"</span>]:
-            <span class="keyword">return</span> [<span class="number">4</span>, <span class="number">8</span>, <span class="number">16</span>][int(choix)-<span class="number">1</span>]
-        <span class="func">print</span>(<span class="str">"❌ mhmmmm NON. Entrez 1, 2 ou 3."</span>)</code></pre>
-              </div>
-              <div class="card-overlay">
-                <span class="hover-text"> Ouvrir la documentation</span>
-              </div>
-            </div>
-          </a>
-          <div class="card-content">
-            <h3>Interface Tournoi Chiffoumi</h3>
-            <p class="meta"> <strong>Objectif :</strong> Menu interactif & génération dynamique de bracket CLI</p>
-            <p class="meta"> <strong>Résultat :</strong> Validation stricte des inputs, UX terminal fluide, rendu ASCII</p>
-            <div class="tech-tags">
-              <span>Python 3</span><span>CLI/UX</span><span>Validation</span><span>Collaboratif</span>
-            </div>
-            <div class="card-actions">
-              <a href="https://github.com/Mannany-Rakhis/Projet-1-python" target="_blank" class="btn-ghost"> Repo GitHub ↗</a>
-              <span class="status-badge"> Lien vers mon travail</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="skills" class="section">
-    <div class="container">
-      <h2 class="section-label reveal">03. Stack Technique</h2>
-      <div class="skills-grid reveal">
-        <div class="skill-card" style="--i:0">
-          <h3>Frontend</h3>
-          <div class="skill-tags">
-            <span>HTML5</span><span>CSS3</span><span>JS ES6</span><span>Responsive Design</span>
-          </div>
-        </div>
-        <div class="skill-card" style="--i:1">
-          <h3>Backend & DB</h3>
-          <div class="skill-tags">
-            <span>PHP 8</span><span>Python 3</span><span>MySQL</span><span>SQL/PDO</span>
-          </div>
-        </div>
-        <div class="skill-card" style="--i:2">
-          <h3>Outils</h3>
-          <div class="skill-tags">
-            <span>Git/GitHub</span><span>Linux</span><span>WAMP</span><span>VS Code</span>
-          </div>
-        </div>
-        <div class="skill-card" style="--i:3">
-          <h3>Expertise</h3>
-          <div class="skill-tags">
-            <span>POO</span><span>Algorithmie</span><span>Sécurité Web</span>
-          </div>
+      <div class="hero-card">
+        <div class="codecard">
+          <div class="codecard-head"><i></i><i></i><i></i><span>profil.json</span></div>
+<pre>{
+  <span class="k">"nom":</span> <span class="v">"Rakhis Mannany"</span>,
+  <span class="k">"poste":</span> <span class="v">"Développeur web backend"</span>,
+  <span class="k">"langages":</span> [<span class="v">"PHP"</span>, <span class="v">"Python"</span>, <span class="v">"JavaScript"</span>],
+  <span class="k">"données":</span> [<span class="v">"MySQL"</span>],
+  <span class="k">"en parallèle":</span> [<span class="v">"Cybersécurité"</span>, <span class="v">"Cloud"</span>],
+  <span class="k">"recherche":</span> <span class="v">"stage ≥ 5 semaines"</span>
+}</pre>
         </div>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section-label reveal">04. Contact</h2>
-      <div class="contact-grid">
-        <div class="contact-info reveal">
-          <h3 class="large-text">Bâtissons le futur ensemble.</h3>
-          <p style="color: var(--text-dim); margin-bottom: 25px;">
-            Actuellement ouvert aux opportunités d'<strong>alternance</strong> ou de stage.
-          </p>
-          <div class="social-links-footer">
-            <a href="https://github.com/Mannany-Rakhis" target="_blank" class="interactive">
-              <i class="devicon-github-original colored"></i> GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/mannany-rakhis/" target="_blank" class="interactive">
-              <i class="devicon-linkedin-plain colored"></i> LinkedIn
-            </a>
+    <main>
+
+      <section id="experience">
+        <p class="label">01 / Expérience</p>
+        <h2>Mission indépendante</h2>
+        <div class="card exp">
+          <div class="exp-head">
+            <h3>Développeur web</h3>
+            <p class="muted">conseilas.fr · site vitrine hébergé sur AWS S3</p>
+            <span class="date">Juillet 2026</span>
+          </div>
+          <ul>
+            <li>Correction du chargement lent du site en production</li>
+            <li>Réparation du système multilingue : français, anglais et arabe</li>
+            <li>Audit du site et remplacement des liens obsolètes</li>
+            <li>Animation en JavaScript des compteurs de la section affiliation, de 0 à la valeur cible</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projets">
+        <p class="label">02 / Projets</p>
+        <h2>Ce que j'ai construit</h2>
+
+        <div class="grid">
+          <article class="card">
+            <div class="card-top">
+              <h3>Site de vente et d'achat de livres</h3>
+              <span class="date">Mai – juin 2025</span>
+            </div>
+            <ul>
+              <li>Migration d'un site HTML/CSS vers PHP avec base de données</li>
+              <li>Ajout de livres avec affichage dynamique</li>
+              <li>Recherche avec filtres et pagination sur le catalogue</li>
+              <li>Liaison front-end / back-end avec MySQL</li>
+            </ul>
+            <div class="card-foot">
+              <span class="tag">PHP</span><span class="tag">MySQL</span>
+              <a class="link" href="https://github.com/Mannany-Rakhis/projet-recherche-et-ajout-livre" target="_blank" rel="noopener">Voir le code ↗</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-top">
+              <h3>Plateforme de QCM</h3>
+              <span class="date">Avril 2026</span>
+            </div>
+            <ul>
+              <li>Tirage aléatoire de 30 questions dans une banque, réponses mélangées</li>
+              <li>Algorithme de randomisation en JavaScript pur, sans bibliothèque</li>
+              <li>Score avec mémorisation du meilleur résultat</li>
+            </ul>
+            <div class="card-foot">
+              <span class="tag">JavaScript</span>
+              <a class="link" href="https://github.com/Mannany-Rakhis/qcm-site" target="_blank" rel="noopener">Voir le code ↗</a>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="sub-title">Autres projets</h3>
+        <div class="grid">
+          <article class="card">
+            <div class="card-top"><h3>Clicker</h3></div>
+            <p>Jeu interactif développé en JavaScript.</p>
+            <div class="card-foot">
+              <span class="tag">JavaScript</span><span class="tag">HTML</span><span class="tag">CSS</span>
+              <a class="link" href="https://github.com/Mannany-Rakhis/clicker" target="_blank" rel="noopener">Voir le code ↗</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-top"><h3>Chiffoumi</h3></div>
+            <p>Projet Python autour du jeu Pierre–Feuille–Ciseaux, en ligne de commande.</p>
+            <div class="card-foot">
+              <span class="tag">Python</span>
+              <a class="link" href="https://github.com/Mannany-Rakhis/Projet-1-python" target="_blank" rel="noopener">Voir le code ↗</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="stack">
+        <p class="label">03 / Stack et formation</p>
+        <h2>Compétences</h2>
+
+        <div class="skills">
+          <div class="skill">
+            <h3>Programmation</h3>
+            <p>Python · PHP · JavaScript · HTML · CSS</p>
+          </div>
+          <div class="skill">
+            <h3>Bases de données</h3>
+            <p>SQL · MySQL · phpMyAdmin</p>
+          </div>
+          <div class="skill">
+            <h3>Cloud et outils</h3>
+            <p>AWS S3 · Git / GitHub · Linux · YAML</p>
           </div>
         </div>
-        <form class="contact-form reveal" action="https://formspree.io/f/mqewvwkz" method="POST">
-          <input type="text" name="name" placeholder="Votre nom" required class="interactive">
-          <input type="email" name="email" placeholder="Votre email" required class="interactive">
-          <textarea name="message" rows="5" placeholder="Votre message..." required class="interactive"></textarea>
-          <button type="submit" class="btn-send interactive">Envoyer →</button>
-        </form>
-      </div>
-    </div>
-  </section>
 
-  <footer class="footer">
-    <div class="container">
-      <p class="mono-accent" style="margin-bottom: 10px;">RAKHIS MANNANY — ÉCOLE-IT VALENCIENNES — 2026</p>
-      <p style="color: var(--text-dim); font-size: 0.8rem;">Crée par Mannany .</p>
+        <div class="grid">
+          <article class="card">
+            <span class="date">2026 – aujourd'hui</span>
+            <h3>Bachelor Cybersécurité &amp; Cloud · 2<sup>e</sup> année</h3>
+            <p class="sub">Ynov Campus, Lille</p>
+            <p class="muted">Titre RNCP niveau 6, pédagogie par projets (Ydays, Yboost, challenges de 48 h), réseau segmenté avec pfSense et OpenVPN, Active Directory, cryptographie, durcissement Linux.</p>
+          </article>
+
+          <article class="card">
+            <span class="date">2025 – 2026</span>
+            <h3>Bachelor Informatique</h3>
+            <p class="sub">École IT, Valenciennes</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="card contact">
+          <div class="contact-text">
+            <h2>Un stage à pourvoir ? Parlons-en.</h2>
+            <p>Métropole lilloise, stage d'au moins 5 semaines.</p>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:rakhism.dev@gmail.com">rakhism.dev@gmail.com</a>
+            <a href="https://www.linkedin.com/in/mannany-rakhis/" target="_blank" rel="noopener">linkedin.com/in/mannany-rakhis</a>
+            <a href="https://github.com/Mannany-Rakhis" target="_blank" rel="noopener">github.com/Mannany-Rakhis</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <span>Rakhis Mannany · 2026</span>
+      <span>Ynov Campus Lille</span>
     </div>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
